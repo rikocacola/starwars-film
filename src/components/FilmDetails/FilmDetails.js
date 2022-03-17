@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 import styles from './FilmDetails.module.scss'
 
+import { FilmList } from '../FilmList/FilmList'
+
 export const FilmDetails = () => {
   const params = useParams();
   const filmId = params.filmId;
@@ -17,10 +19,7 @@ export const FilmDetails = () => {
   }, [])
   return (
     <div className={styles['film-details-wrap']}>
-      <div className={styles['film-title']}>
-        <p>{film.title}</p>
-      </div>
-      {film.opening_crawl}
+      {film ? <FilmList film={film}/> : 'Loading'}
     </div>
   )
 }

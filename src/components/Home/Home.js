@@ -19,12 +19,12 @@ export const Home = () => {
               <h2>
                 {film.title}
               </h2>
-              <h4>
-                {film.release_date}
-              </h4>
-              <h3>
-                {film.director}
-              </h3>
+              <h5>
+                Release Date : {film.release_date}
+              </h5>
+              <h5>
+                Director : {film.director}
+              </h5>
             </Link>
           ))}
         </div>

@@ -1,14 +1,43 @@
 .home-wrap{
-  padding: 50px;
+  padding: 70px;
   .movie-container{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
     .movie-card{
-      border: 1px solid black;
+      background-color: #282727;
       padding: 20px;
       text-decoration: none;
-      color: black;
+      color: #666;
+      border-radius: 5px;
+      &:hover{
+        color: white;
+        transform: scale(1.01);
+        border-radius: 0;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .home-wrap{
+    padding: 30px;
+    .movie-container{
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 30px;
+      .movie-card{
+        background-color: #282727;
+        padding: 20px;
+        text-decoration: none;
+        color: #666;
+        border-radius: 5px;
+        &:hover{
+          color: white;
+          transform: scale(1.01);
+          border-radius: 0;
+        }
+      }
     }
   }
 }
