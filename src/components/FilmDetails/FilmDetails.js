@@ -1,7 +1,8 @@
 import React from 'react'
-import { useParams,useLocation } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
+import styles from './FilmDetails.module.scss'
 
 export const FilmDetails = () => {
   const params = useParams();
@@ -15,8 +16,11 @@ export const FilmDetails = () => {
       .catch(err => console.log(err))
   }, [])
   return (
-    <div>
-      {film.title}
+    <div className={styles['film-details-wrap']}>
+      <div className={styles['film-title']}>
+        <p>{film.title}</p>
+      </div>
+      {film.opening_crawl}
     </div>
   )
 }

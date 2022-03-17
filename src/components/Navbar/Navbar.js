@@ -6,7 +6,7 @@ export const Navbar = () => {
   return (
     <nav className={styles['navbar-wrap']}>
       <Link className={styles['logo-navbar']} to="/">
-        <img src="/logo-star-wars.png"/>
+        <img src="/logo-star-wars.png" alt='logo-star-wars'/>
       </Link>
     </nav>
   )
