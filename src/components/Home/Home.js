@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
+import ReactLoading from 'react-loading'
+
 import styles from './Home.module.scss'
 
 export const Home = () => {
@@ -13,6 +15,7 @@ export const Home = () => {
 
   return (
     <div className={styles['home-wrap']}>
+      {films.length  ? (
         <div className={styles['movie-container']}>
           {films.map((film,idx) => (
             <Link key={film.episode_id} to={`/movie/${idx+1}`} className={styles['movie-card']}>
@@ -28,6 +31,13 @@ export const Home = () => {
             </Link>
           ))}
         </div>
+      ) : (
+        <div className={styles['loading-background']}>
+          <ReactLoading height={'15%'} width={'15%'} type="spin" color="#fff"/>
+        </div>
+      )
+
+      }
     </div>
   )
 }
