@@ -2,11 +2,15 @@ import React from 'react'
 
 import styles from './FilmList.module.scss'
 
+import { useNavigate } from "react-router-dom";
+
 export const FilmList = ({film}) => {
+  const navigate = useNavigate();
   return (
     <div className={styles['film-details-container']}>
         <div className={styles['film-title']}>
           <p>{film.title}</p>
+          <div className={styles['go-home']} onClick={()=> navigate('/')}>X</div>
         </div>
         <div className={styles['field-container']}>
           <div className={styles['field-title']}>

@@ -7,10 +7,19 @@
       font-size: 32px;
       font-weight: bold;
       margin: 20px 0 40px 0;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 2px solid #edec51;
       p{
           padding-bottom: 10px;
-          border-bottom: 2px solid #edec51;
           margin: 0;
+      }
+      .go-home{
+        cursor: pointer;
+        color: #666;
+        &:hover{
+          color: white;
+        }
       }
   }
 
